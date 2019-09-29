@@ -13,11 +13,10 @@ scripts:
 - yarn test
 - yarn build
 before_install:
-- openssl aes-256-cbc -K $encrypted_dc4cacc08359_key -iv $encrypted_dc4cacc08359_iv -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
-  - eval "$(ssh-agent -s)"
-  # 修改权限
-  - chmod 600 ~/.ssh/id_rsa
-  # 添加私钥
-  - ssh-add ~/.ssh/id_rsa
-  - git config --global user.name "yushen7"
-  - git config --global user.email "431185521@qq.com"
+- openssl aes-256-cbc -K $encrypted_dc4cacc08359_key -iv $encrypted_dc4cacc08359_iv
+  -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
+- eval "$(ssh-agent -s)"
+- chmod 600 ~/.ssh/id_rsa
+- ssh-add ~/.ssh/id_rsa
+- git config --global user.name "yushen7"
+- git config --global user.email "431185521@qq.com"
