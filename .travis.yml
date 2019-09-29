@@ -21,3 +21,4 @@ before_install:
   - ssh-add ~/.ssh/id_rsa
   - git config --global user.name "yushen7"
   - git config --global user.email "431185521@qq.com"
+  
