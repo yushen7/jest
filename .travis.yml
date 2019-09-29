@@ -4,9 +4,6 @@ node_js:
 branchs:
   only:
   - master
-cache:
-  directories:
-  - node_modules
 install:
 - yarn install
 scripts:
